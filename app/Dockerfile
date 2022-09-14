@@ -14,6 +14,7 @@ COPY . .
 
 # our app is running on port 5000 within the container, so need to expose it
 EXPOSE 5000
+EXPOSE 81
 
 # the command that starts our app
 CMD ["node", "index.js"]

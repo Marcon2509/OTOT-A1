@@ -1,10 +1,3 @@
-FROM nginx:1.15.8-alpine
-
-#config
-COPY ./nginx.conf /etc/nginx/nginx.conf
-
-#content, comment out the ones you dont need!
-COPY ./*.html /usr/share/nginx/html/
-#copy ./*.css /usr/share/nginx/html/
-#copy ./*.png /usr/share/nginx/html/
-#copy ./*.js /usr/share/nginx/html/
+FROM nginx
+COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY ./index.html /usr/share/nginx/html/index.html

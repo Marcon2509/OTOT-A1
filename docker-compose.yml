@@ -1,13 +1,13 @@
-version: "3.8"
-services:
+version: "3.9"
+services: 
     nodeserver:
-        build:
-            context: ./app
-        ports:
-            - "5000:5000"
+      build:
+          context: ./app
+      ports:
+          - "5000:5000"
     nginx:
-        restart: always
-        build:
-            context: ./nginx
-        ports:
-            - "80:80"
+      restart: always
+      build:
+          context: ./nginx
+      ports:
+          - "81:81"
